@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L.D.O. Movers</title>
+  <style>
+.hero {
+  background-color: #add8e6;
+  padding: 1.2rem 1rem 0.8rem; /* Slimmer vertical space */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+   }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(to bottom right, #add8e6, #ffffff, #ffe082);
+      color: #333;
+      overflow-x: hidden;
+    }
+
+    header {
+      background-color: #add8e6;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+
+    .logo {
+      width: 100px;
+      transition: transform 0.3s ease;
+    }
+
+    .logo:hover {
+      transform: scale(1.1);
+    }
+
+    .menu-toggle {
+      position: absolute;
+      top: 220px;
+      left: 0;
+      background-color: #ffe082;
+      border: none;
+      font-weight: bold;
+      padding: 0.7rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      z-index: 100;
+    }
+
+    .menu-toggle:hover {
+      background-color: #ffcc50;
+    }
+
+    .sidebar {
+      position: absolute;
+      top: 260px;
+      left: -180px;
+      width: 180px;
+      background-color: #ffffffee;
+      transition: left 0.3s ease;
+      padding: 1rem;
+      z-index: 99;
+    }
+
+    .sidebar.show {
+      left: 0;
+    }
+
+    .sidebar button {
+      background-color: #ffe082;
+      border: none;
+      padding: 0.7rem;
+      font-weight: bold;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom: 0.5rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .sidebar button:hover {
+      background-color: #ffcc50;
+      transform: translateX(4px);
+    }
+
+    main {
+      padding: 2rem;
+      transition: transform 0.3s ease;
+      margin-left: 0;
+      max-width: 1000px;
+    }
+
+    main.shifted {
+      transform: translateX(180px);
+    }
+
+    section {
+      margin-bottom: 3rem;
+    }
+
+    ul {
+      padding-left: 1rem;
+    }
+
+    .photo-showcase {
+      width: 100%;
+      max-width: 600px;
+      margin: 1rem auto;
+      display: block;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .media-stack img,
+    .media-stack video {
+      width: 100%;
+      max-width: 500px;
+      margin: 1rem auto;
+      display: block;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .media-stack img:hover,
+    .media-stack video:hover {
+      transform: scale(1.03);
+    }
+
+    #star-rating span {
+      font-size: 1.5rem;
+      cursor: pointer;
+      transition: color 0.3s ease;
+      color: gray;
+    }
+
+    #star-rating span.active {
+      color: gold;
+    }
+
+    footer {
+      background-color: #fff8e1;
+      text-align: center;
+      padding: 1rem;
+      border-top: 2px solid #ffe082;
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+  <img src="logo.png" alt="L.D.O. Movers Logo" class="logo" />
+  <h1><i>Welcome to L.D.U. Movers</i></h1>
+</header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav class="sidebar" id="sidebar">
+    <button onclick="showSection('about')">About Us & Areas</button>
+    <button onclick="showSection('gallery')">Gallery</button>
+    <button onclick="showSection('reviews')">Reviews</button>
+  </nav>
+
+  <main id="main-content">
+    <section id="about">
+      <h2>About Us</h2>
+      <p>L.D.O. Movers is your trusted relocation partner dedicated to making every move seamless, safe, and stress-free. With years of experience across Kenya, we've built a reputation on reliability, professionalism, and a personalized touch in every service we offer.</p>
+
+      <img src="crew-loading.jpg" alt="Crew loading household items" class="photo-showcase" />
+
+      <p>Our team is rigorously trained to handle residential, commercial, and long-distance relocations with care and efficiency. Whether it's packing fragile items or navigating tight staircases, we treat your belongings as if they were our own.</p>
+
+      <img src="fleet-ready.jpg" alt="Fleet of moving trucks ready for dispatch" class="photo-showcase" />
+
+      <p>Equipped with modern vehicles and logistics technology, we service all major towns with precise coordination. We offer flexible packages tailored to your budget, and a customer support line that stays active from pickup to delivery.</p>
+
+      <img src="client-smile.jpg" alt="Satisfied customer after successful relocation" class="photo-showcase" />
+
+      <h3>Areas We Cover</h3>
+      <ul>
+        <li>📍 Nairobi Central</li>
+        <li>🏞️ Kiambu County</li>
+        <li>🏖️ Mombasa & Coast Region</li>
+        <li>🌾 Eldoret & Western</li>
+        <li>🚚 Long-Distance Relocations Nationwide</li>
+      </ul>
+
+      <p><strong>📞 Call us:</strong> +254794110860</p>
+<a href="https://wa.me/254712345678?text=Hi%20L.D.O.%20Movers%2C%20I%27m%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer">
+  Message us on WhatsApp
+</a>
+      <p><strong>✉️ Email:</strong> <a href="mailto:ldomovers@example.com">
+  Email Us
+</a></p>
+<a href="https://www.facebook.com/profile.php?id=61576973154612" target="_blank" rel="noopener noreferrer">
+  Visit us on Facebook
+</a>
+</section>
+    <section id="gallery" style="display:none;">
+      <h2>Our Moving Gallery</h2>
+      <div class="media-stack">
+        <img src="moving1.jpg" alt="Team Loading Truck" />
+        <img src="moving2.jpg" alt="Organized Packing" />
+        <video src="move-tour.mp4" controls></video>
+      </div>
+    </section>
+
+    <section id="reviews" style="display:none;">
+      <h2>Client Reviews</h2>
+      <form id="review-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <div id="star-rating">
+          <span onclick="setStars(1)">★</span>
+          <span onclick="setStars(2)">★</span>
+          <span onclick="setStars(3)">★</span>
+          <span onclick="setStars(4)">★</span>
+          <span onclick="setStars(5)">★</span>
+        </div>
+        <input type="hidden" id="stars" value="0" />
+        <textarea id="message" placeholder="Your review..." required></textarea>
+        <button type="submit">Submit Review</button>
+      </form>
+      <div id="review-list"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 L.D.O. Movers. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const sidebar = document.getElementById("sidebar");
+      const main = document.getElementById("main-content");
+      sidebar.classList.toggle("show");
+      main.classList.toggle("shifted");
+    }
+
+    function showSection(id) {
+      const sections = document.querySelectorAll("main > section");
+      sections.forEach(sec => sec.style.display = "none");
+      document.getElementById(id).style.display = "block";
+    }
+
+    function setStars(num) {
+      document.getElementById("stars").value = num;
+      const stars = document.querySelectorAll("#star-rating span");
+      stars.forEach((star, index) => {
+        star.classList.toggle("active", index < num);
+      });
+    }
+
+    document.getElementById("review-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const name = document.getElementById("name").value;
+      const message = document.getElementById("message").value;
+      const stars = document.getElementById("stars").value;
+
+      const review = document.createElement("div");
+      review.innerHTML = `<strong>${name}</strong><br>${"★".repeat(stars)}<br>${message}<hr>`;
+      document.getElementById("review-list").prepend(review);
+      this.reset();
+      setStars(0);
+    });
+
+    // Show About section by default
+    showSection('about');
+
+  const dropdown = document.querySelector('.dropdown-menu');
+  const toggleBtn = document.querySelector('.dropdown-toggle');
+  let closeTimeout;
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation(); // Prevent immediate close from document click
+    dropdown.classList.toggle('show');
+
+    // Reset previous timer if it's running
+    clearTimeout(closeTimeout);
+
+    if (dropdown.classList.contains('show')) {
+      // Set auto-close timer for s
+      closeTimeout = setTimeout(() => {
+        dropdown.classList.remove('show');
+      }, 5000);
+    }
+  });
+
+  document.addEventListener('click', (e) => {
+    if (!dropdown.contains(e.target) && !toggleBtn.contains(e.target)) {
+      dropdown.classList.remove('show');
+      clearTimeout(closeTimeout); // Optional: cancel timer if closed early
+    }
+  });
+  </script>
+</body>
+</html>
